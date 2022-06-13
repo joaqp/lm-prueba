@@ -15,8 +15,6 @@ K=np.arange(0,L)
 t=K*Ts
 
 
-
-S2=S1
 Vmax_sensor=1
 Vmin_sensor=-1
 
@@ -27,13 +25,21 @@ G=(Vmax_ADC-Vmin_ADC)/(Vmax_sensor-Vmin_sensor)
 offset=(Vmax_ADC-Vmin_ADC)/2
 
 S2=S1*G+ offset
+res = float(Fs / (L-1)) #Resolucion frecuencial
+n = np.array(range(0, L)) * res 
 
-
-
+plt.subplot(2,1,1)
 line,=plt.plot(t,S1)
 line.set_color('red')
 plt.xlabel("t(s)")
 plt.ylabel("Voltaje")
+
+plt.subplot(2,1,2)
+line,=plt.plot(n, S2)
+line.set_color('orange')
+plt.xlabel("frequencia, Hz")
+plt.ylabel("Amplitud")
+
 
 plt.show()
 
