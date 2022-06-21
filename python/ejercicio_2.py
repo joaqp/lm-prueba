@@ -46,6 +46,13 @@ D1f=(S2*(D1_max/S2_max))
 D1=round(S2*(D1_max/S2_max))
 E1=D1-D1f
 
+plt.subplot (3,1,1) 
+plt.plot(t, D1)    
+plt.plot(t, D1f)
+plt.plot(t, E1)                                                                     
+plt.xlabel('t[s]')  
+
+plt.title("D1")
 
 #D2 --> 12
 
@@ -55,6 +62,13 @@ D2f=(S2*(D2_max/S2_max))
 D2=round(S2*(D2_max/S2_max))
 E2=D2-D2f
 
+ 
+plt.subplot (3,1,2) 
+plt.plot(t, D2)    
+plt.plot(t, D2f)
+plt.plot(t, E2)                                                                     
+plt.xlabel('t[s]')                                                         
+plt.title("D2")
 
 #D3 --> 24
 
@@ -65,12 +79,14 @@ D3=round(S2*(D3_max/S2_max))
 E3=D3-D3f
 
 plt.subplot (3,1,3) 
+plt.plot(t, D3)    
+plt.plot(t, D3f)
+plt.plot(t, E3)                                                                     
+plt.xlabel('t[s]')                                                         
+plt.title("D3")
 
-plt.show()
-
+plt.plot
 #Graficos ------------------------------------
-#EJ 2
-plt.figure(1)
 plt.subplot(2,1,1)
 line,=plt.plot(t,S1)
 line.set_color('red')
@@ -84,37 +100,6 @@ plt.xlabel("frequencia, Hz")
 plt.ylabel("Amplitud")
 
 
-plt.show()
-
-# D1
-
-plt.figure(2)
-# Primer Gráfico :
-im1 = plt.subplot (3,1,1) 
-plt.plot(t,D1)  
-plt.plot(t, D1f)
-plt.plot(t, E1)    
-plt.grid(True)                                                                    
-plt.xlabel('[s]')                                                         
-plt.title("D1")
-
-# d2
-im1 = plt.subplot (3,1,2) 
-plt.plot(t, D2)    
-plt.plot(t, D2f)
-plt.plot(t, E2)    
-plt.grid(True)                                                                    
-plt.xlabel('[s]')                                                         
-plt.title("D2")
-
-# D3
-im1 = plt.subplot (3,1,3) 
-plt.plot(t, D3)    
-plt.plot(t, D3f)
-plt.plot(t, E3)    
-plt.grid(True)                                                                    
-plt.xlabel('[s]')                                                         
-plt.title("D3")    
 plt.show()
 
 #---------------------------------------------------
